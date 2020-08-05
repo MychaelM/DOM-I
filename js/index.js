@@ -52,6 +52,12 @@ anchorTags.forEach((element) => {
   navNum++;
 });
 
+anchorTags.forEach((element) => {
+  element.addEventListener("mouseover", (event) => {
+  event.target.style.fontSize = "2rem";
+  event.target.style.color = "dodgerblue";
+})});
+
 const navTag = document.querySelector("nav");
 console.log(navTag);
 
@@ -71,6 +77,11 @@ navTag.append(newNavItem2);
 
 const ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerText = siteContent["cta"]["h1"];
+// adding event listener for onClick
+ctaH1.addEventListener("click", (event) => {
+  event.target.style.fontSize = "5rem";  
+  event.target.style.color = "slategrey";  
+})
 
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.innerText = siteContent["cta"]["button"];
