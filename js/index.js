@@ -47,9 +47,27 @@ const anchorTags = document.querySelectorAll("a");
 let navNum = 1;
 anchorTags.forEach((element) => {
   element.innerText = navValues[`nav-item-${navNum.toString()}`];
+  element.style.color = "green";
   console.log(navNum);
   navNum++;
 });
+
+const navTag = document.querySelector("nav");
+console.log(navTag);
+
+const newNavItem1 = document.createElement("a");
+newNavItem1.href = "#";
+newNavItem1.textContent = "First";
+newNavItem1.style.color = "green";
+console.log(newNavItem1);
+
+const newNavItem2 = document.createElement("a");
+newNavItem2.href = "#";
+newNavItem2.textContent = "Last";
+newNavItem2.style.color = "green";
+
+navTag.prepend(newNavItem1);
+navTag.append(newNavItem2);
 
 const ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.innerText = siteContent["cta"]["h1"];
