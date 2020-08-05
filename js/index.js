@@ -76,3 +76,16 @@ const topH4 = document.querySelectorAll(".top-content .text-content h4");
 
 const middleImg = document.getElementById("middle-img");
 middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+const contactH4 = document.querySelector(".contact h4");
+// console.log(contact);
+contactH4.innerText = siteContent["contact"]["contact-h4"];
+
+const contactText = document.querySelectorAll(".contact p");
+// console.log(contactText[0]);
+contactText[0].innerText = siteContent["contact"]["address"];
+contactText[1].innerText = siteContent["contact"]["phone"];
+contactText[2].innerText = siteContent["contact"]["email"];
+
+const footerText = document.querySelector("footer p");
+footerText.innerText = siteContent["footer"]["copyright"];
