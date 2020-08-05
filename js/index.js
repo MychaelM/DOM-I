@@ -52,12 +52,27 @@ anchorTags.forEach((element) => {
 });
 
 const ctaH1 = document.querySelector(".cta-text h1");
-ctaH1.innerText = "Dom is Awesome!";
+ctaH1.innerText = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector(".cta-text button");
-ctaButton.innerText = "Get Started";
+ctaButton.innerText = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById("cta-img");
-ctaImg.src = "img/header-img.png";
+ctaImg.src = siteContent["cta"]["img-src"];
 
-// const topH4 = document.
+
+
+// const topHeaderText = ["Features", "About"];
+
+// const topH4 = document.querySelectorAll(".top-content .text-content h4");
+
+// let topHeaderNum = 0;
+// topH4.forEach((element) => {
+//     element.innerText = topHeaderText[topHeaderNum];
+//     topHeaderNum++;
+// });
+
+const topH4 = document.querySelectorAll(".top-content .text-content h4");
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
