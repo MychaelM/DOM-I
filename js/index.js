@@ -60,7 +60,14 @@ ctaButton.innerText = siteContent["cta"]["button"];
 const ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent["cta"]["img-src"];
 
+const topContentH4 = document.querySelectorAll(".top-content h4");
+console.log(topContentH4);
+topContentH4[0].innerText = siteContent["main-content"]["features-h4"];
+topContentH4[1].innerText = siteContent["main-content"]["about-h4"];
 
+const topContentText = document.querySelectorAll(".top-content p");
+topContentText[0].innerText = siteContent["main-content"]["features-content"];
+topContentText[1].innerText = siteContent["main-content"]["about-content"];
 
 // const topHeaderText = ["Features", "About"];
 
